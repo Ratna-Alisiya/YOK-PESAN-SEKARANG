@@ -1,0 +1,28 @@
+
+body {
+  font-family: Arial, sans-serif;
+  padding: 20px;
+  max-width: 600px;
+  margin: auto;
+}
+label {
+  display: block;
+  margin-top: 10px;
+  font-weight: bold;
+}
+select, input, textarea {
+  width: 100%;
+  padding: 8px;
+  margin-top: 5px;
+}
+button {
+  margin-top: 15px;
+  padding: 10px 20px;
+  background-color: #28a745;
+  color: white;
+  border: none;
+}
+.harga {
+  font-weight: bold;
+  margin-top: 10px;
+}

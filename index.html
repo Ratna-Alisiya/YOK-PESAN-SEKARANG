@@ -1,0 +1,60 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Form Pemesanan</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <h2>Form Pemesanan Makanan</h2>
+
+  <form id="orderForm">
+    <label>Nama:</label>
+    <input type="text" name="nama" required>
+
+    <label>No HP:</label>
+    <input type="text" name="nohp" required>
+
+    <label>Pilih Menu:</label>
+    <select name="menu" id="menu" required onchange="updateHarga()">
+      <option value="">-- Pilih --</option>
+      <option value="Pisang Gembul">Pisang Gembul</option>
+      <option value="Cilok Kuah Kacang">Cilok Kuah Kacang</option>
+    </select>
+
+    <div id="varianWrapper" style="display:none">
+      <label>Varian Rasa (Pisang Gembul):</label>
+      <select name="varian" id="varian">
+        <option value="Tiramisu">Tiramisu</option>
+        <option value="Taro">Taro</option>
+        <option value="Choco Crunchy">Choco Crunchy</option>
+        <option value="Mix Glaze">Mix Glaze</option>
+      </select>
+    </div>
+
+    <label>Topping:</label>
+    <select name="topping" id="topping" multiple onchange="updateHarga()">
+      <option value="Almond">Almond (+3K)</option>
+      <option value="Milo">Milo (+2K)</option>
+      <option value="Keju">Keju (+2K)</option>
+      <option value="Oreo">Oreo (+2K)</option>
+      <option value="Ekstra Keju">Ekstra Keju (+2K)</option>
+    </select>
+
+    <label>Jumlah:</label>
+    <input type="number" name="jumlah" id="jumlah" min="1" value="1" required onchange="updateHarga()">
+
+    <label>Catatan:</label>
+    <textarea name="catatan"></textarea>
+
+    <p class="harga" id="totalHarga">Total: Rp 0</p>
+
+    <button type="submit">Pesan Sekarang</button>
+  </form>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
